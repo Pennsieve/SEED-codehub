@@ -1,0 +1,32 @@
+name: cnt_codehub
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.0
+  - numpy
+  - scipy
+  - pandas
+  - requests
+  - deprecation
+  - tqdm
+  - ipython
+  - pytorch
+  - scikit-learn
+  - paramiko
+  - nltk
+  - pip:
+    - pennprov
+    - mne
+    - mne-bids
+    - mne-icalabel
+    - pyEDFlib
+    - EDFlib-Python
+    - pyyaml
+    - ../wheels/ieeg-1.6-py3-none-any.whl
+    - dearpygui
+    - pyperclip
+    - keyring
+    - fooof
+    - neurodsp
+    - prettytable

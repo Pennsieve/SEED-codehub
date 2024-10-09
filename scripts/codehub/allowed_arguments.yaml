@@ -1,0 +1,59 @@
+# These should be updated in adding new functionality to the addon modules.
+allowed_project_args:
+    SCALP_BASIC: Basic scalp processing pipeline. (bjprager 10/2023)
+    IMAGING_BASIC: Basic imaging processing pipeline.
+    NEUROVISTA_BASIC: Basic Neurovista progessing pipeline.
+allowed_datatypes:
+    EDF: Read in EDF data.
+    PICKLE: Read in pickle dictionary with a 'data' key (dataframe) and a 'samp_freq' key
+    MIX: Infer data from a mixed sample and read in the data based on the extension type.
+allowed_clean_args:
+    HUP: Clean according to HUPs lead and channel format.
+    TEMPLE: Clean according to Temple's TUEG dataset.
+    NEUROVISTA: Clean for NeuroVista data.
+allowed_channel_args:
+    HUP1020: Channels associated with a 10-20 montage performed at HUP.
+    NEUROVISTA: Channels for NeuroVista data.
+    RAW: Use all possible channels. Warning, channels may not match across different datasets.
+allowed_montage_args:
+    HUP1020: Use a 10-20 montage.
+    NEUROVISTA: Use a custom NeuroVista montage.
+    COMMON_AVERAGE: Use a common average montage.
+
+# Imaging config keywords. need to be handled differently since they can be combined and are not a single choice
+allowed_imaging_programs:
+    FSL:
+        help: Path to FSL configuration file.
+        path: 'path/to/FSL'
+    FreeSurfer:
+        help: Path to Freesurfer configuration file.
+        path: 'path/to/Freesurfer'
+    ANTS:
+        help: Path to Ants configuration file.
+        path: 'path/to/ANTS'
+    DSI-Studio:
+        help: Path to DSI-studio configuration file.
+        path: 'path/to/DSI-studio'
+    Singularity:
+        help: Path to Singularity docker configuration file.
+        path: 'path/to/Singularity'
+    Synth-BDisco:
+        help: Path to Synth-BDisco configuration file.
+        path: 'path/to/Synth-BDisco'
+    QSIPrep:
+        help: Path to QSI Prep
+        path: 'path/to/qsi_prep'
+
+
+# These should only be modified if changing core functionality of the pipeline
+allowed_input_args:
+    CSV: Use a comma separated file of files to read in.
+    MANUAL: Manually enter filepaths.
+    GLOB: Use Python glob to select all files that follow a user inputted pattern.
+allowed_viability_args:
+    #VIABLE_DATA: Drop datasets that contain a NaN column. (default)
+    #VIABLE_COLUMNS: Use the minimum cross section of columns across all datasets that contain no NaNs.
+    None: Do not remove data with NaNs.
+allowed_majoraxis_args:
+    column: Default. Raw data is in [samples,channel] (i.e. Columnar) format.
+    row: Raw data is in [channel,samples] (i.e. Row) format.  

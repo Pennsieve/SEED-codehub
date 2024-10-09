@@ -8,7 +8,7 @@ This image has many other tools that can be utilized other than what is describe
 ## SEED Instructions
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-2. In the folder with the EDF file(s), create a CSV which contains paths for each EDF. See sameple_CSV for example. Name this CSV `input.csv`
+2. In the folder with the EDF file(s), create a CSV which contains paths for each EDF. See [sameple_CSV for example](https://github.com/Pennsieve/SEED-codehub/blob/main/sample_CSV.csv). Name this CSV `input.csv`
 3. After Docker Desktop is installed and running on your computer, open the command line terminal
 4. In the terminal run `docker pull pennsieve/seed-codehub:latest` Note: This is a ~6GB download
 5. Next run `docker run -it --platform linux/amd64 -v PATH_TO_EDF:/app/data pennsieve/seed-codehub` Note: Change PATH_TO_EDF to the location of the files
